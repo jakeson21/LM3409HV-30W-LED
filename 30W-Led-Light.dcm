@@ -1,8 +1,25 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 2N7002
+D MOSFET NCH 100V 13.1A 6WSON
+K N-Channel MOSFET
+F https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf
+$ENDCMP
+#
 $CMP C
 D Unpolarized capacitor
 K cap capacitor
+$ENDCMP
+#
+$CMP CONN_1X2
+D Generic Female Connector, Single Row, 01x02, socket header
+K Connector, Female, Generic
+$ENDCMP
+#
+$CMP CSD19538Q2T
+D MOSFET NCH 100V 13.1A 6WSON
+K N-Channel MOSFET Logic Level
+F http://www.ti.com/lit/ds/symlink/csd19538q2.pdf
 $ENDCMP
 #
 $CMP LM3409
@@ -11,9 +28,19 @@ K LED, buck, Power
 F lm3409hv-q1.pdf
 $ENDCMP
 #
+$CMP PanelMountJack
+D DC Jack Panel Mount
+$ENDCMP
+#
 $CMP Resistor
 D Resistor
 K Resistor
+$ENDCMP
+#
+$CMP UCC27511DBVR
+D Single-Channel, High-Speed, Low-Side Gate Driver
+K MOSFET Gate Driver
+F http://www.ti.com/lit/ds/symlink/ucc27511.pdf
 $ENDCMP
 #
 #End Doc Library

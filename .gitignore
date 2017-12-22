@@ -19,3 +19,10 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+# Temporary directories
+Boost/
+OBE/
+*.lnk
+*~$*
+.ipynb_checkpoints/
