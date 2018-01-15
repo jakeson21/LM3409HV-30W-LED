@@ -1,0 +1,435 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Project
+LIBS:9V_Buck_PS_For_FET_Dimmer-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "3S-4S LiPo to 9V DC-DC Converter"
+Date "2018-01-15"
+Rev "0.1"
+Comp "Jacob Miller"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TPS62135RGX U1
+U 1 1 5A4EFA49
+P 5350 3400
+F 0 "U1" H 5350 4050 60  0000 C CNN
+F 1 "TPS62135RGX" H 5350 3900 60  0000 C CNN
+F 2 "Project Library:VQFN-HR-11" H 5350 3500 60  0001 C CNN
+F 3 "" H 5350 3500 60  0001 C CNN
+	1    5350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A4EFAC3
+P 4400 3600
+F 0 "#PWR01" H 4400 3350 50  0001 C CNN
+F 1 "GND" H 4400 3450 50  0000 C CNN
+F 2 "" H 4400 3600 50  0001 C CNN
+F 3 "" H 4400 3600 50  0001 C CNN
+	1    4400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR02
+U 1 1 5A4EFD4C
+P 3700 2850
+F 0 "#PWR02" H 3700 2700 50  0001 C CNN
+F 1 "+12V" H 3700 2990 50  0000 C CNN
+F 2 "" H 3700 2850 50  0001 C CNN
+F 3 "" H 3700 2850 50  0001 C CNN
+	1    3700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3000 4800 3000
+$Comp
+L C Cin1
+U 1 1 5A4EFD85
+P 3700 3250
+F 0 "Cin1" H 3725 3350 50  0000 L CNN
+F 1 "10.0uF" H 3725 3150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3738 3100 50  0001 C CNN
+F 3 "" H 3700 3250 50  0001 C CNN
+	1    3700 3250
+	1    0    0    -1  
+$EndComp
+Text Label 3700 3000 0    60   ~ 0
+VIN
+$Comp
+L GND #PWR03
+U 1 1 5A4EFE5F
+P 6200 4700
+F 0 "#PWR03" H 6200 4450 50  0001 C CNN
+F 1 "GND" H 6200 4550 50  0000 C CNN
+F 2 "" H 6200 4700 50  0001 C CNN
+F 3 "" H 6200 4700 50  0001 C CNN
+	1    6200 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3800 6200 4700
+Wire Wire Line
+	6200 4000 5900 4000
+Wire Wire Line
+	5900 3800 6200 3800
+Connection ~ 6200 4000
+$Comp
+L C Css1
+U 1 1 5A4EFECD
+P 4600 4250
+F 0 "Css1" H 4625 4350 50  0000 L CNN
+F 1 "2.2nF" H 4625 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4638 4100 50  0001 C CNN
+F 3 "" H 4600 4250 50  0001 C CNN
+	1    4600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4100 4600 4000
+Wire Wire Line
+	4600 4000 4800 4000
+Wire Wire Line
+	4600 4500 4600 4400
+Wire Wire Line
+	3500 4500 8250 4500
+Connection ~ 6200 4500
+Connection ~ 4600 4500
+$Comp
+L L L1
+U 1 1 5A4F00C4
+P 6450 3000
+F 0 "L1" V 6400 3000 50  0000 C CNN
+F 1 "1.0uH" V 6525 3000 50  0000 C CNN
+F 2 "Inductors_SMD:L_Vishay_IHLP-1212" H 6450 3000 50  0001 C CNN
+F 3 "" H 6450 3000 50  0001 C CNN
+	1    6450 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6300 3000 5900 3000
+$Comp
+L R R3
+U 1 1 5A4F01DE
+P 6450 3600
+F 0 "R3" V 6530 3600 50  0000 C CNN
+F 1 "100k" V 6450 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 6380 3600 50  0001 C CNN
+F 3 "" H 6450 3600 50  0001 C CNN
+	1    6450 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 5A4F0289
+P 7050 3400
+F 0 "R1" V 7130 3400 50  0000 C CNN
+F 1 "1.18M" V 7050 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 6980 3400 50  0001 C CNN
+F 3 "" H 7050 3400 50  0001 C CNN
+	1    7050 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A4F02BC
+P 6800 4050
+F 0 "R2" V 6880 4050 50  0000 C CNN
+F 1 "100k" V 6800 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 6730 4050 50  0001 C CNN
+F 3 "" H 6800 4050 50  0001 C CNN
+	1    6800 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3600 5900 3600
+$Comp
+L C Cout1
+U 1 1 5A4F0407
+P 7700 3750
+F 0 "Cout1" H 7725 3850 50  0000 L CNN
+F 1 "22uF" H 7725 3650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 7738 3600 50  0001 C CNN
+F 3 "" H 7700 3750 50  0001 C CNN
+	1    7700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 4500 7700 3900
+Wire Wire Line
+	6800 4200 6800 4500
+Connection ~ 6800 4500
+Wire Wire Line
+	5900 3400 6900 3400
+Wire Wire Line
+	6800 3400 6800 3900
+Connection ~ 6800 3400
+Wire Wire Line
+	6600 3000 8250 3000
+Wire Wire Line
+	7700 3000 7700 3600
+Wire Wire Line
+	7200 3400 7300 3400
+Wire Wire Line
+	7300 3400 7300 3000
+Connection ~ 7300 3000
+Wire Wire Line
+	5900 3200 6800 3200
+Wire Wire Line
+	6800 3200 6800 3000
+Connection ~ 6800 3000
+Wire Wire Line
+	6600 3600 7500 3600
+Wire Wire Line
+	7500 3600 7500 3000
+Connection ~ 7500 3000
+$Comp
+L +9V #PWR04
+U 1 1 5A4F06A8
+P 8150 2850
+F 0 "#PWR04" H 8150 2700 50  0001 C CNN
+F 1 "+9V" H 8150 2990 50  0000 C CNN
+F 2 "" H 8150 2850 50  0001 C CNN
+F 3 "" H 8150 2850 50  0001 C CNN
+	1    8150 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7700 3000
+Text Label 8150 3000 0    60   ~ 0
+VOUT
+Text Notes 8700 3100 0    60   ~ 0
+Vout = 9.0V\nIout = 3.9A
+$Comp
+L Conn_01x01 J1
+U 1 1 5A4F09A3
+P 3300 3000
+F 0 "J1" H 3300 3100 50  0000 C CNN
+F 1 "+Vin" H 3300 2900 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-5mmDrill" H 3300 3000 50  0001 C CNN
+F 3 "" H 3300 3000 50  0001 C CNN
+	1    3300 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x01 J2
+U 1 1 5A4F09F5
+P 3300 4500
+F 0 "J2" H 3300 4600 50  0000 C CNN
+F 1 "-Vin" H 3300 4400 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-5mmDrill" H 3300 4500 50  0001 C CNN
+F 3 "" H 3300 4500 50  0001 C CNN
+	1    3300 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x01 J3
+U 1 1 5A4F0AB8
+P 8450 3000
+F 0 "J3" H 8450 3100 50  0000 C CNN
+F 1 "+Vout" H 8450 2900 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-5mmDrill" H 8450 3000 50  0001 C CNN
+F 3 "" H 8450 3000 50  0001 C CNN
+	1    8450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3000 8150 2850
+Connection ~ 8150 3000
+Wire Wire Line
+	3700 2850 3700 3100
+Connection ~ 3700 3000
+Wire Wire Line
+	3700 3400 3700 4500
+Connection ~ 3700 4500
+$Comp
+L Conn_01x01 J4
+U 1 1 5A4F0FD4
+P 8450 4500
+F 0 "J4" H 8450 4600 50  0000 C CNN
+F 1 "-Vout" H 8450 4400 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-5mmDrill" H 8450 4500 50  0001 C CNN
+F 3 "" H 8450 4500 50  0001 C CNN
+	1    8450 4500
+	1    0    0    -1  
+$EndComp
+Connection ~ 7700 4500
+Text Label 4550 3800 0    60   ~ 0
+MODE
+Text Label 4550 3600 0    60   ~ 0
+VSEL
+Text Label 5950 3000 0    60   ~ 0
+SW
+Text Label 5950 3200 0    60   ~ 0
+VOS
+Text Label 5950 3400 0    60   ~ 0
+FB
+Text Label 5950 3600 0    60   ~ 0
+PG
+Text Label 5950 3800 0    60   ~ 0
+FB2
+$Comp
+L JP3 JP2
+U 1 1 5A52E361
+P 2550 4200
+F 0 "JP2" H 2550 4400 50  0000 C CNN
+F 1 "Mode" H 2550 4000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 2450 4200 50  0001 C CNN
+F 3 "" H 2550 4200 50  0001 C CNN
+	1    2550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3800 3400 3800
+Wire Wire Line
+	3400 3800 3400 4200
+Wire Wire Line
+	3400 4200 2700 4200
+$Comp
+L GND #PWR05
+U 1 1 5A52E484
+P 2900 4300
+F 0 "#PWR05" H 2900 4050 50  0001 C CNN
+F 1 "GND" H 2900 4150 50  0000 C CNN
+F 2 "" H 2900 4300 50  0001 C CNN
+F 3 "" H 2900 4300 50  0001 C CNN
+	1    2900 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4300 2700 4300
+Wire Wire Line
+	2700 4100 2900 4100
+Text Label 2900 4100 2    60   ~ 0
+VIN
+Wire Wire Line
+	4400 3600 4800 3600
+$Comp
+L R R5
+U 1 1 5A53EC94
+P 4600 1950
+F 0 "R5" V 4680 1950 50  0000 C CNN
+F 1 "10k" V 4600 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 4530 1950 50  0001 C CNN
+F 3 "" H 4600 1950 50  0001 C CNN
+	1    4600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5A53EDEC
+P 4450 3200
+F 0 "R4" V 4530 3200 50  0000 C CNN
+F 1 "150k" V 4450 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 4380 3200 50  0001 C CNN
+F 3 "" H 4450 3200 50  0001 C CNN
+	1    4450 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L JP3 JP1
+U 1 1 5A53EF45
+P 4700 1500
+F 0 "JP1" H 4700 1700 50  0000 C CNN
+F 1 "UVLO" H 4700 1300 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 4600 1500 50  0001 C CNN
+F 3 "" H 4700 1500 50  0001 C CNN
+	1    4700 1500
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4600 1650 4600 1800
+Wire Wire Line
+	4700 1650 4700 3200
+Wire Wire Line
+	4600 3200 4800 3200
+$Comp
+L GND #PWR06
+U 1 1 5A53F37C
+P 4600 2200
+F 0 "#PWR06" H 4600 1950 50  0001 C CNN
+F 1 "GND" H 4600 2050 50  0000 C CNN
+F 2 "" H 4600 2200 50  0001 C CNN
+F 3 "" H 4600 2200 50  0001 C CNN
+	1    4600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2200 4600 2100
+Connection ~ 4700 3200
+Wire Wire Line
+	4300 3200 4200 3200
+Wire Wire Line
+	4200 3200 4200 3000
+Connection ~ 4200 3000
+$Comp
+L R R6
+U 1 1 5A53F853
+P 4800 1950
+F 0 "R6" V 4880 1950 50  0000 C CNN
+F 1 "7.5k" V 4800 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 4730 1950 50  0001 C CNN
+F 3 "" H 4800 1950 50  0001 C CNN
+	1    4800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5A53F89A
+P 4800 2200
+F 0 "#PWR07" H 4800 1950 50  0001 C CNN
+F 1 "GND" H 4800 2050 50  0000 C CNN
+F 2 "" H 4800 2200 50  0001 C CNN
+F 3 "" H 4800 2200 50  0001 C CNN
+	1    4800 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2200 4800 2100
+Wire Wire Line
+	4800 1800 4800 1650
+Text Notes 4550 1400 0    60   ~ 0
+NC: For no UVLO\n12: For 11.2 UVLO (3S)\n23: For 14.8 UVLO (4S)
+Text Label 4800 4000 2    60   ~ 0
+SS/TR
+Text Label 4700 3200 2    60   ~ 0
+EN
+$EndSCHEMATC

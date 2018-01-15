@@ -1,0 +1,19 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP GS3
+D 3-pin jumper/solder bridge
+K jumper solder bridge
+$ENDCMP
+#
+$CMP JP3
+D 3-pin jumper/solder bridge
+K jumper solder bridge
+$ENDCMP
+#
+$CMP TPS62135
+D High Accuracy 3-V to 17-V 4-A Step-Down Converters with DCS-Control
+K Step Down, Converters, Buck
+F tps62135.pdf
+$ENDCMP
+#
+#End Doc Library

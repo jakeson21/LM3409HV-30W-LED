@@ -1,0 +1,7 @@
+Qty,partname,description,lib
+0,"C","Unpolarized capacitor","device"
+0,"Conn_01x01","Generic connector, single row, 01x01","conn"
+0,"JP3","3-pin jumper/solder bridge","Project"
+0,"L","Inductor","device"
+0,"R","Resistor","device"
+0,"TPS62135","High Accuracy 3-V to 17-V 4-A Step-Down Converters with DCS-Control","Project"

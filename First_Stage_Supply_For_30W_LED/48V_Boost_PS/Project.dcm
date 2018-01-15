@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM2585
+D SIMPLE SWITCHER® 3A Flyback Regulator, TO-220
+K regulator, switch
+F lm2585.pdf
+$ENDCMP
+#
+#End Doc Library
